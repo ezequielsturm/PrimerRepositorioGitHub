@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+/*----------------------------------------ESTILOS  MENU------------------------------------------------*/
+body{
+    font-family: sans-serif;
+    height: 100%;
+
+}
+h2{
+    text-align: center;
+    position: relative;
+
+}
+h2::after,h2::before{
+	content:"";
+	position: absolute;
+	width: 400px;
+	height: 2px;
+	background-color: black;
+	top: 0.6em;	
+    
+}
+h2::before{
+    left: 200px;
+
+}
+h2::after{
+    right: 200px;
+
+}
+
+
+/*---------------------------General */
+
+.navegacion{
+    background-color: white;
+    font-family: sans-serif;  
+    width: 1000px; 
+    margin: 30px auto;
+}
+.navegacion   ul {     /*llamo al ul class=menu y submenu*/
+    list-style: none;
+    
+}
+.menu li a:hover{       /* Vamo a darle efecto, asi va a nietos e hijos */
+    color: #ce7d35;   /* le damos color a las letras */
+    transition: all.3s; /* Se reduce el tiempo e intensidad del color */
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*----------------------PRIMER NIVEL*/
+
+.menu > li{                   /* Con > Selecciono los li del menu primer nivel */
+    position: relative; 
+    display: inline-block;  
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.menu > li > a{    /* Al ser "a" elementos en linea, los transformamos en bloque con disp: block */
+    display: block; /* Hace que el a ocupe todo el li*/
+    padding: 15px 20px;
+    color: #353535;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu{
+    display: block;
+    /* "" vicibility: 1 "" */
+    /* "" transition: opacity 1.5 */
+}
+
+
+
+/*---------------------SEGUNDO NIVEL*/
+.submenu{
+    position: absolute; /* hace que se posicione debajo de servicios que esta en absolute */
+    background: white;
+    display: none;     /* "" si agrego visibility:hidden y el resto """" le da una transicion*/
+    /* "" opacity: 0; "" */
+    margin-top: 210px;
+    
+}
+
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: black ;
+    text-decoration: none;
+}
+
+
+
+/*-----------------------------------------------NOSOTROS-----------------------------------------------*/
+.imgNos{
+    text-align: center;
+}
+
+
+
+/*-----------------------------------------------FOOTER------------------------------------------------*/
+footer{
+    background-color: #24262b;
+}
+.container{
+    background-color: #24262b;
+    color: white;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.footer-col ul{
+    list-style-type: none;
+    
+}
+
+.footer-col ul li a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    margin-top: 3px;
+}
+
+.footer-col ul li a:hover{
+    color: #ce7d35;   /* le damos color a las letras */
+    transition: all.3s; /* Se reduce el tiempo e intensidad del color */
+}
+
+.social-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-links a{
+    margin-top: 10px;
+}
+
+
+.legals{
+    background-color: #24262b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+
+
+
+
